@@ -22,7 +22,7 @@ from tensorflow.keras import backend as K
 from pyswarms.single import GlobalBestPSO
 
 # ------------------------- Load and Preprocess Data -------------------------
-DE_data = pd.read_excel("FE_DE_data.xlsx", sheet_name="Sheet1")
+DE_data = pd.read_excel("FE_DE_NA_filled_data.xlsx", sheet_name="Sheet1")
 DE_data.set_index("Date", inplace=True)
 DE_data.dropna(inplace=True)
 
