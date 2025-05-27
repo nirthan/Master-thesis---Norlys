@@ -25,7 +25,7 @@ from pyswarms.single import GlobalBestPSO
 # ------------------------- Load and Preprocess Data -------------------------
 
 # Load dataset
-FR_data = pd.read_excel("Benchmark_model_data.xlsx", sheet_name="Sheet1")
+FR_data = pd.read_excel("Benchmark_model_NA_filled_data.xlsx", sheet_name="Sheet1")
 date_range = pd.date_range(start='2023-01-01 00:00:00', periods=len(FR_data), freq='H')
 FR_data['Timestamp'] = date_range
 FR_data.set_index("Timestamp", inplace=True)
