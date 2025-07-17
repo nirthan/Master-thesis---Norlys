@@ -1,4 +1,4 @@
-# ⚡ Feature Engineering in Electricity Spot Price Forecasting: Using XGBoost and LSTM Models
+# ⚡ Feature Engineering in Electricity Spot Price Forecasting Using XGBoost and LSTM Models
 
 ## 📘 Overview
 
