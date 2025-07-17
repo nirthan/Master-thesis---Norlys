@@ -1,5 +1,5 @@
-# ⚡ Feature Engineering in Electricity Spot Price Forecasting Using XGBoost and LSTM Models
-
+# ⚡ Feature Engineering in Electricity Spot Price Forecasting: 
+## Using XGBoost and LSTM Models
 ## 📘 Overview
 
 This master's thesis investigates the extent to which **feature engineering (FE)** can improve the performance of machine learning models — specifically **XGBoost** and **LSTM** — in forecasting **electricity spot prices** in **Germany (DE)** and **France (FR)**.
