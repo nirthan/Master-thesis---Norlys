@@ -32,26 +32,32 @@ To achieve this, we developed two types of models:
 - **Statistical Testing**:
   - Diebold-Mariano test for predictive accuracy comparison.
 
-## 📊 Key Results
+## 📊 Key Findings
 
-| Model   | Metric | DE (Raw) | DE (FE) | FR (Raw) | FR (FE) |
-|---------|--------|----------|---------|----------|---------|
-| **XGBoost** | MAE    | 8.6145   | 6.8916  | 7.1812   | 5.8538  |
-|         | MSE    | 227.44   | 156.61  | 120.35   | 81.06   |
-|         | RMSE   | 15.0813  | 12.5145 | 10.9705  | 9.0031  |
-| **LSTM**    | MAE    | 14.1548  | 13.7150 | 12.9010  | 11.0903 |
-|         | MSE    | 719.87   | 699.83  | 287.00   | 215.39  |
-|         | RMSE   | 26.8304  | 26.4544 | 16.9411  | 14.6764 |
+### Model Performance and Feature Engineering
 
-- **Statistical Significance** (Diebold-Mariano Test):
-  - XGBoost DE: *p* = 0.0002
-  - XGBoost FR: *p* = 0.0063
+This project evaluated the impact of feature engineering on two machine learning models — XGBoost and LSTM — for forecasting electricity spot prices in Germany and France.
 
-- **Spread Strategy**:
-  - LSTM (FE): **€82,908 EUR/MWh**, error rate: 15.86%
-  - LSTM (Raw): €80,595 EUR/MWh, error rate: 18.00%
-  - XGBoost (FE): €84,336 EUR/MWh, error rate: 14.36%
-  - XGBoost (Raw): **€84,397 EUR/MWh**, error rate: 14.22%
+- Both models were trained with two sets of features:
+  - **Raw models**: using all available features without modification.
+  - **Feature-engineered (FE) models**: using a carefully selected and created subset of features to reduce redundancy and improve model simplicity.
+
+- The feature-engineered models consistently **outperformed the raw models** across multiple accuracy metrics, showing reduced forecasting errors.
+
+- Statistical testing confirmed that the improvements for the XGBoost model were **statistically significant** in both countries.
+
+- For the LSTM models, while formal statistical testing was limited due to dataset differences, the performance metrics consistently favored the feature-engineered approach.
+
+### Practical Impact on Trading Strategy
+
+- Applying the forecasting models to a trading (spread) strategy revealed that:
+  - Improvements in forecast accuracy do not always translate directly to better decision-making outcomes.
+  - The feature-engineered LSTM model notably achieved higher cumulative profits and lower error rates compared to its raw counterpart.
+  - The XGBoost model showed marginal differences in profitability despite better forecast accuracy, highlighting the complexity of linking forecast improvements to financial gains.
+
+### Conclusion
+
+Overall, the study demonstrates that **feature engineering enhances the predictive power** of both XGBoost and LSTM models in electricity spot price forecasting. These improvements can contribute to more accurate and reliable forecasts, which are essential for effective market decision-making and energy trading.
 
 ## 🔍 Insights
 
